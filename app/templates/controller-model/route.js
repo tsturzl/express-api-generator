@@ -22,4 +22,4 @@ router.route('/api/{{name}}/:id')
 
 module.exports = function(app) {
   app.use(router);
-}
+};

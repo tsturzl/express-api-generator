@@ -1,14 +1,13 @@
-/* {{type}}
---- {{name}} ---
+/* Middleware
+--- Responder ---
 
-{{description}}
-
+Promise flavored response method injector.
 
 Author: {{author}}
 */
 'use strict';
 
-module.exports = function(req, res, next) {
+function responder(req, res, next) {
 
   res.reject = function(err) {
     try {
@@ -25,4 +24,8 @@ module.exports = function(req, res, next) {
   };
 
   next();
+}
+
+module.exports = function(app) {
+  app.use(responder);
 };
