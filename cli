@@ -6,9 +6,7 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 
-var vars = {
-
-};
+var vars = {};
 
 rl.question('Name(camelCase): ', function(answer) {
   vars.name = answer.camelCase();
@@ -40,6 +38,8 @@ vars.author = author.firstName + ' ' + author.lastName + ' <' + author.email + '
 //pass to template compiler
 require('./app')(vars);
 
+rl.close();
+process.stdin.destroy();
 //helpers
 String.prototype.camelCase = function(){
   var newString = '';
