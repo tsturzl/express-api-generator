@@ -36,7 +36,11 @@ describe("{{name}}", function() {
 
     it('should update document', function(done) {
       {{name}}.updateDoc(id, {})
-        .then()
+        .then(done)
+        .catch(function(err) {
+          should.not.exist(err);
+          done()
+        });
     });
   });
 
