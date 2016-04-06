@@ -8,7 +8,7 @@ Author: {{author}}
 */
 'use strict';
 
-var {{name}} = require('../models/{{name}}');
+var {{name}} = require('../models/{{camelName}}');
 
 var {{controllerName}} = {};
 

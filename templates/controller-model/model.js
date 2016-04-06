@@ -57,7 +57,7 @@ var {{schemaName}} = new mongoose.Schema({
 /* Manager
  ----------------------------------------------------------------------------- */
 
-require('../managers/{{name}}')({{schemaName}});
+require('../managers/{{camelName}}')({{schemaName}});
 
 
 //Export model
