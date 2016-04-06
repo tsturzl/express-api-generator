@@ -12,3 +12,5 @@ var gulp = require('gulp'),
   mkdirp = require('mkdirp');
 
 gulp = require('./generators/app.js')(gulp, install, conflict, template, rename, _, inflection, inquirer, mkdirp, es);
+gulp = require('./generators/middleware.js')(gulp, install, conflict, template, rename, _, inflection, inquirer, mkdirp, es);
+gulp = require('./generators/module.js')(gulp, install, conflict, template, rename, _, inflection, inquirer, mkdirp, es);
