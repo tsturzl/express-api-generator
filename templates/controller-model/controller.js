@@ -1,4 +1,4 @@
-/* {{type}}
+/* Controller
 --- {{name}} ---
 
 {{description}}
@@ -20,7 +20,7 @@ var {{controllerName}} = {};
 {{controllerName}}.create = function(req, res) {
   if(!req.body) return res.reject(new Error("Missing body"));
   
-  {{name}}.insert(req.body)
+  {{name}}.createDoc(req.body)
     .then(res.resolve)
     .catch(res.reject)
 };
@@ -54,7 +54,7 @@ var {{controllerName}} = {};
   
   if(!id) return res.reject(new Error("Missing id parameter"));
   
-  {{name}}.read(id)
+  {{name}}.fetch(id)
     .then(res.resolve)
     .catch(res.reject);
 };
@@ -70,8 +70,7 @@ var {{controllerName}} = {};
   if(!body) return res.reject(new Error("Missing body"));
   if(!id) return res.reject(new Error("Missing id parameter"));
   
-  {{name}}.updater(id, body)
-    .exec()
+  {{name}}.updateDoc(id, body)
     .then(res.reject)
     .catch(res.resolve);
 };

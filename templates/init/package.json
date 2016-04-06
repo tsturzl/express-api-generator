@@ -1,0 +1,36 @@
+{
+  "name": "{{appName}}",
+  "version": "0.0.1",
+  "description": "{{appDesc}}",
+  "main": "",
+  "scripts": {
+    "test": "mocha test/unit",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "{{appAuthorName}} <{{appAuthorEmail}}>",
+  "license": "{{license}}",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "bluebird": "^3.3.4",
+    "mongoose": "^4.4.10",
+    "express": "^4.13.4",
+    "cookie-parser": "^1.4.1",
+    "body-parser": "^1.15.0",
+    "client-sessions": "^0.7.0",
+    "bunyan": "^1.8.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "should": "^8.3.0",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.0.6"
+  }
+}

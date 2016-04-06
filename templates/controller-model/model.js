@@ -1,4 +1,4 @@
-/* {{type}}
+/* Model
 --- {{name}} ---
 
 {{description}}
@@ -8,25 +8,15 @@ Author: {{author}}
 */
 'use strict';
 
-var mongoose  = require('mongoose');
-var _         = require('underscore');
-var ObjectId  = mongoose.Schema.ObjectId;
-var {{name}}  = require('../managers/{{name}}');
+var mongoose  = require('mongoose'),
+  _         = require('underscore'),
+  ObjectId  = mongoose.Schema.ObjectId;
 
 //Construct Schema
 var {{schemaName}} = new mongoose.Schema({
-  update_at: {type: Date}
+  updated_at: {type: Date}
 });
 
-
-/* Manager
------------------------------------------------------------------------------ */
-
-//Bind model methods from manager
-{{schemaName}}.statics = {{name}}.model;
-
-//Bind document methods from manager
-{{schemaName}}.methods = {{name}}.document;
 
 /* Validators
 ----------------------------------------------------------------------------- */
@@ -64,8 +54,11 @@ var {{schemaName}} = new mongoose.Schema({
   return this.getCreateDate();
 });
 
-/* Private methods
------------------------------------------------------------------------------ */
+/* Manager
+ ----------------------------------------------------------------------------- */
+
+require('../managers/{{name}}')({{schemaName}});
+
 
 //Export model
-module.exports = mongoose.model('{{namePlural}}', {{schemaName}});
+module.exports = mongoose.model('{{collectionName}}', {{schemaName}});
