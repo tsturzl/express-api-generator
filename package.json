@@ -2,7 +2,7 @@
   "name": "express-api-generator",
   "version": "0.0.1",
   "description": "Express API generator with promises and bunyan logging using slush generator.",
-  "main": "cli",
+  "main": "slushfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
