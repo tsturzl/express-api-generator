@@ -1,6 +1,6 @@
 {
   "name": "slush-express-rest",
-  "version": "0.0.2r2",
+  "version": "0.0.2r3",
   "description": "Express API generator with promises and bunyan logging using slush generator.",
   "main": "slushfile.js",
   "scripts": {
