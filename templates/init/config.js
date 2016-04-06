@@ -1,25 +1,25 @@
 var config = {
   production: {
     mongodb: "mongodb://localhost/{{appName}}-prod",
-    viewsPath: "/lib/viewsPath",
+    views: "/lib/views",
     logLevel: "info",
     port: 3000
   },
   staging: {
     mongodb: "mongodb://localhost/{{appName}}-stage",
-    viewsPath: "/lib/viewsPath",
+    views: "/lib/views",
     logLevel: "debug",
     port: 3000
   },
   development: {
     mongodb: "mongodb://localhost/{{appName}}-dev",
-    viewsPath: "/lib/viewsPath",
+    views: "/lib/views",
     logLevel: "trace",
     port: 3000
   },
   test: {
     mongodb: "mongodb://localhost/{{appName}}-test",
-    viewsPath: "/lib/viewsPath",
+    views: "/lib/views",
     logLevel: "warn",
     port: 3000
   }
