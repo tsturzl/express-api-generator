@@ -1,5 +1,5 @@
 {
-  "name": "express-api-slush",
+  "name": "slush-express-rest",
   "version": "0.0.1",
   "description": "Express API generator with promises and bunyan logging using slush generator.",
   "main": "slushfile.js",
