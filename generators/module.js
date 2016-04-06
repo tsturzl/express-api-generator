@@ -1,8 +1,9 @@
 var fs = require('fs');
+var path = require('path');
 module.exports = function(gulp, install, conflict, template, rename, _, inflections, inquirer, mkdirp, es) {
   gulp.task('module', function (done) {
 
-    var config = JSON.parse(fs.readFileSync(process.cwd() + '/package.json'));
+    var config = JSON.parse(fs.readFileSync(path.resolve('./package.json')));
 
     var prompts = [{
       name: 'modName',
