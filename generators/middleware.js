@@ -19,4 +19,5 @@ module.exports = function(gulp, install, conflict, template, rename, _, inflecti
         .on('end', done);
     });
   });
+  return gulp;
 };
