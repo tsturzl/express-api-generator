@@ -7,7 +7,7 @@ module.exports = function(gulp, install, conflict, template, rename, _, inflecti
       default: 'middleware'
     }];
 
-    inquirer(prompts, function(answers) {
+    inquirer.prompt(prompts, function(answers) {
       var fileName = _.camelize(_.slugify(answers.name)) + '.js';
 
       mkdirp.sync('./lib/middleware');
