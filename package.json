@@ -1,5 +1,5 @@
 {
-  "name": "express-api-generator",
+  "name": "express-api-slush",
   "version": "0.0.1",
   "description": "Express API generator with promises and bunyan logging using slush generator.",
   "main": "slushfile.js",
@@ -11,9 +11,18 @@
     "url": "git+https://github.com/tsturzl/express-api-generator.git"
   },
   "author": "Travis Sturzl",
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/arvindr21/slush-meanjs/blob/master/LICENSE"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/tsturzl/express-api-generator/issues"
+  },
+  "engines": {
+    "node": ">= 0.10.26",
+    "npm": ">=1.4.3"
   },
   "homepage": "https://github.com/tsturzl/express-api-generator#readme",
   "dependencies": {
