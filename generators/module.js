@@ -1,6 +1,6 @@
 var fs = require('fs');
 module.exports = function(gulp, install, conflict, template, rename, _, inflections, inquirer, mkdirp, es) {
-  gulp.task('', function (done) {
+  gulp.task('module', function (done) {
 
     var config = JSON.parse(fs.readFileSync(process.cwd() + '/package.json'));
 
