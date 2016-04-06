@@ -15,3 +15,5 @@ var logger = bunyan.createLogger(options);
 logger.middleware = function(app) {
   app.use(expressLogger(options));
 };
+
+module.exports = logger;
