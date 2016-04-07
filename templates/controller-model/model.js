@@ -25,13 +25,13 @@ var {{schemaName}} = new mongoose.Schema({
 /* Hooks
 ----------------------------------------------------------------------------- */
 
-//stamp update_at on save
+//stamp updated_at on save
 {{schemaName}}.pre('save', function(done) {
   this.updated_at = new Date();
   done();
 });
 
-//stamp update_at on update
+//stamp updated_at on update
 {{schemaName}}.pre('update', function(done) {
   this.updated_at = new Date();
   done();
@@ -41,7 +41,7 @@ var {{schemaName}} = new mongoose.Schema({
 /* Indices
 ----------------------------------------------------------------------------- */
 
-//Index for sorting and querying by update_at
+//Index for sorting and querying by updated_at
 {{schemaName}}.index({updated_at: 1});
 
 
