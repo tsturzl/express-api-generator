@@ -1,7 +1,7 @@
 'use strict';
 
 var router = require('express').Router();
-var {{controllerName}} = require('../controllers/{{controllerName}}');
+var {{controllerName}} = require('../controllers/{{camelName}}');
 
 router.route('/api/{{routeName}}')
   .get({{controllerName}}.list)
