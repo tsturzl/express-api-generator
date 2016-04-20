@@ -50,7 +50,7 @@ var {{controllerName}} = {};
    - Desc: Retrieve document by _id
 */
 {{controllerName}}.read = function(req, res) {
-  var id = req.query.id;
+  var id = req.params.id;
   
   if(!id) return res.reject(new Error("Missing id parameter"));
   
@@ -65,7 +65,7 @@ var {{controllerName}} = {};
 */
 {{controllerName}}.update = function(req, res) {
   var body = req.body;
-  var id = req.query.id;
+  var id = req.params.id;
   
   if(!body) return res.reject(new Error("Missing body"));
   if(!id) return res.reject(new Error("Missing id parameter"));
@@ -80,7 +80,7 @@ var {{controllerName}} = {};
    - Desc: Delete single document or array of _id's
 */
 {{controllerName}}.delete = function(req, res) {
-  var id = req.query.id;
+  var id = req.params.id;
   
   if(!id) return res.reject(new Error("Missing id parameter"));
   

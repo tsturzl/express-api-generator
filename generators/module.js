@@ -63,15 +63,16 @@ module.exports = function(gulp, install, conflict, template, rename, _, inflecti
         .pipe(conflict('./lib/routes'))
         .pipe(gulp.dest('./lib/routes'));
 
-      mkdirp.sync('./test/unit');
+      /*mkdirp.sync('./test/unit');
 
       var test = gulp.src(__dirname + '/../templates/test/unitTest.js')
         .pipe(template(answer))
         .pipe(rename(fileName))
         .pipe(conflict('./test/unit'))
         .pipe(gulp.dest('./test/unit'));
+      */
 
-      es.merge(controller, model, manager, route, test)
+      es.merge(controller, model, manager, route)
         .on('end', done);
     });
   });

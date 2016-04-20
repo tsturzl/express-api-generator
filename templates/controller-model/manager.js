@@ -33,18 +33,11 @@ module.exports = function({{schemaName}}) {
   {{schemaName}}.statics.updateDoc = function(id, data) {
     var me = this;
     return new Promise(function(resolve, reject) {
+      if(!id) reject(new Error("Missing _id"));
       if(typeof id === "string") id = ObjectId(id);
 
-      me.findById({_id: id})
+      me.findByIdAndUpdate(id, data, {safe: false, new: true})
         .exec()
-        .then(function(doc) {
-          doc = _.extend(doc, data);
-
-
-          return new Promise(function(resolve, reject){
-            doc.save().then(reject, resolve);
-          });
-        })
         .then(resolve)
         .catch(reject);
     });

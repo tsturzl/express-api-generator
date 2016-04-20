@@ -21,7 +21,7 @@ describe("{{name}}", function() {
       {{name}}.createDoc({})
         .then(function(doc) {
           doc.should.have.property("_id");
-          doc.should.have.property('updated_date').as.a.Date();
+          doc.should.have.property('updated_at').as.a.Date();
           id = doc._id;
           done();
         })
@@ -49,7 +49,7 @@ describe("{{name}}", function() {
       {{name}}.fetch(id)
         .then(function(doc) {
           doc.should.have.property("_id");
-          doc.should.have.property('updated_date').as.a.Date();
+          doc.should.have.property('updated_at').as.a.Date();
         })
         .catch(function(err) {
           should.not.exist(err);
