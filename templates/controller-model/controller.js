@@ -71,8 +71,8 @@ var {{controllerName}} = {};
   if(!id) return res.reject(new Error("Missing id parameter"));
   
   {{name}}.updateDoc(id, body)
-    .then(res.reject)
-    .catch(res.resolve);
+    .then(res.resolve)
+    .catch(res.reject);
 };
 
 /*
